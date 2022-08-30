@@ -1,0 +1,7 @@
+.seachDiv{
+  position: absolute;
+}
+
+.searchDiv input {
+  width: 150px;
+}
