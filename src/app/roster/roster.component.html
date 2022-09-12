@@ -16,14 +16,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="tg-0pky">18F</td>
-      <td class="tg-0pky">Mark Twain</td>
-      <td class="tg-0pky">876-564-423</td>
-      <td class="tg-0pky">783462</td>
+    <tr *ngFor="let agent of agents">
+      <td class="tg-0pky"> {{agent.account}}  </td>
+      <td class="tg-0pky">{{agent.firstName}} {{agent.lastName}} </td>
+      <td class="tg-0pky">{{agent.phoneNumber}}</td>
+      <td class="tg-0pky">{{agent.agentId}}</td>
       <td class="tg-0pky button_cell">
-        <a routerLink="edit">  <button >Edit</button></a>
-        <button>Delete </button>
+        <a routerLink="edit/{{agent._id}}">  <button >Edit</button></a>
+        <button (click)='deleteAgent(agent)'>Delete </button>
       </td>
     </tr>
   </tbody>

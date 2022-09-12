@@ -1,6 +1,6 @@
+import { RosterService } from './service/roster.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormBuilder } from '@angular/forms';
+
 
 
 
@@ -34,11 +37,13 @@ import { CreateComponent } from './create/create.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+
 
 
 
   ],
-  providers: [],
+  providers: [RosterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

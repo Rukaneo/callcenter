@@ -1,0 +1,77 @@
+.formbody {
+  border: 1px white solid;
+  margin-left: 37%;
+  margin-top: 15%;
+  color: black;
+  position:absolute;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20%;
+  background-color: rgba(118, 244, 0, 0.551) ;
+  font-size: 20px;
+  font-family: cursive;
+
+}
+
+.formbody div {
+  padding: 10px;
+}
+
+input[type=text] {
+  height: 20px;
+  border-radius: 10%;
+  background-color: rgba(255, 127, 80, 0.76);
+  color: whitesmoke;
+  width: 200px;
+  margin-left: -5px;
+}
+
+input[type=password] {
+  height: 20px;
+  border-radius: 10%;
+  background-color: rgba(255, 127, 80, 0.76);
+  color: whitesmoke;
+  width: 200px;
+}
+
+Select {
+  height: 20px;
+  background-color: rgba(255, 127, 80, 0.76);
+  border-radius: 10%;
+  color: whitesmoke;
+
+
+}
+input {
+  font-family: cursive;
+}
+input[type=submit] {
+  height: 40px;
+  width: 80px;
+
+  border-color:  rgba(32, 87, 32, 0.808);
+  margin-left: 30%;
+  background-color: rgba(250, 126, 24, 0.37);
+  color: black;
+  border-radius: 30%;
+
+}
+
+
+.login {
+
+  margin-left: 48%;
+  margin-top: 12%;
+  position: absolute;
+  color: rgb(250, 126, 24);
+
+}
+input[type=submit]:hover{
+
+  background-color:  rgb(250, 126, 24);
+  color:white;
+}
+
+.subject {
+  font-size: 18px;
+}

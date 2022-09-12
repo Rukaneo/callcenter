@@ -7,7 +7,12 @@ const Agents = require('../models/roster.model')
  * Get all items
  */
 exports.getAllAgents = async (req, res) => {
+  
 	try {
+        res.render('login',
+        {
+            page_title: "You are not logged in"
+        });
 		const agents = await Agents.find()
         JSONResponse.success(res, 'Success.', agents, 200)
 	} catch (error) {

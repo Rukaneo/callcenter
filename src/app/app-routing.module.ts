@@ -9,6 +9,7 @@ import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
 
 
+
 const routes: Routes = [
   {path: '', component:RosterComponent},
   {path:'roster', component:RosterComponent},
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'charts', component:ChartsComponent},
   {path:'roster/edit', component:EditComponent},
-  {path:'edit/:id', component:EditComponent},
+  {path:'roster/edit/:id', component:EditComponent},
   {path:'create', component:CreateComponent},
 ];
 

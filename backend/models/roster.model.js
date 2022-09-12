@@ -6,6 +6,7 @@ let rosterSchema = new db.Schema({
 	lastName: { type: String, required: true },
 	phoneNumber: { type: Number, required: true },
 	agentId: { type: Number, required: true, unique: true },
+  emailAddress: { type: String, required: true, unique: true },
 	totalCalls: { type: Number  },
 	dropCalls: { type: Number  },
 	receivedCalls: { type: Number  },

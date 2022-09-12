@@ -5,7 +5,7 @@ const {
 	createItem,
 	deleteItemsById,
 	getAllItems,
-} = require('../controllers/items.controller')
+} = require('../controllers/admin.controller')
 
 router.route('/').get(IndexController.index)
 

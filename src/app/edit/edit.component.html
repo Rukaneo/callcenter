@@ -1,41 +1,44 @@
 
 <h2> Add New Student   </h2>
-<form [formGroup]="addAgent" novalidate class="form" >
+<form [formGroup]="updateAgent"  novalidate class="form" (ngSubmit)="onSubmit()" >
+
   <div>
 
-    <label for="Name"> Name:</label>
-    <input type="text" formControlName="name" name="Name">
+
+    <label for="Account"> Account</label>
+    <input type="text" formControlName="account" name="Account">
   </div>
   <div>
-    <label for="Cohort"> Cohort:</label>
-    <input type="text" formControlName="cohort" name="Cohort">
+
+
+    <label for="FirstName"> First Name</label>
+    <input type="text" formControlName="firstName" name="FirstName">
+  </div>
+  <div>
+    <label for="Lastname"> Last Name</label>
+    <input type="text" formControlName="lastName" name="Lastname">
   </div>
   <div>
     <label for="Email"> Email:</label>
-    <input type="email" formControlName="email" name="Email">
+    <input type="email" formControlName="emailAddress" name="Email">
   </div>
   <div>
+    <div>
+      <label for="AgentId"> Agent ID:</label>
+      <input type="AgentId" formControlName="agentId" name="AgentId">
+    </div>
+
     <label for="phoneNumber"> Phone Number:</label>
     <input type="number" formControlName="phoneNumber" name="phoneNumber">
   </div>
   <div>
-    <label for="phoneNumber"> Received Calls</label>
-    <input type="number" formControlName="phoneNumber" name="phoneNumber">
+    <button  type="submit" > Update Agent</button>
   </div>
-  <div>
-    <label for="phoneNumber"> Failed Calls:</label>
-    <input type="number" formControlName="phoneNumber" name="phoneNumber">
-  </div>
-  <div>
-    <label for="phoneNumber"> Total Calls:</label>
-    <input type="number" formControlName="phoneNumber" name="phoneNumber">
-  </div>
-  <div>
-     <button type="submit" (click)="onSubmit()"> Edit Agent</button>
-  </div>
+</form>
+
 
   <div>
     <app-charts></app-charts>
   </div>
-</form>
+
 
