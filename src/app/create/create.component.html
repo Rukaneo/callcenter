@@ -2,7 +2,7 @@
 
 
 <h2> Add New Agent   </h2>
-<form [formGroup]="addAgent"  novalidate class="form" (ngSubmit)="createAgent()" >
+<form [formGroup]="addAgent"  novalidate class="form"  >
 
   <div>
 
@@ -34,7 +34,7 @@
     <input type="number" formControlName="phoneNumber" name="phoneNumber">
   </div>
   <div>
-    <button  type="submit" > Create A New Agent</button>
+    <button  type="submit" (click)="createAgent()" > Create A New Agent</button>
   </div>
 </form>
 

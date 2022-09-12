@@ -1,8 +1,8 @@
 class IndexController {
 	static index = (req, res) => {
 		res.json({
-			name: 'CalL Center',
-			version: 'v0.1.0',
+			name: 'Call Center',
+			version: 'v0.0.1',
 		})
 	}
 }

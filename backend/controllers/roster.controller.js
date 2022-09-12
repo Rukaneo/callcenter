@@ -5,14 +5,14 @@ const Agents = require('../models/roster.model')
 
 /**
  * ### Description
- * Get all items
+ * Get all Agents
  */
 exports.getAllAgents = async (req, res) => {
 	try {
-		const agents = await Agents.find()
+		const agents = await Agents.find().sort( { lastName: 1, firstName: 1 });
         JSONResponse.success(res, 'Success.', agents, 200)
 	} catch (error) {
-		JSONResponse.error(res, "Failure handling admin model.", error, 500)
+		JSONResponse.error(res, "Failure handling roster model.", error, 500)
 	}
 }
 

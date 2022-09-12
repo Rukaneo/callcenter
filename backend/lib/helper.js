@@ -1,9 +1,10 @@
 class JSONResponse {
-   static success(res, message = "success", data, status) {
+   static success(res, message = "success", data, status,) {
       res.status(status ?? res.statusCode).json({
          status: status ?? res.statusCode,
          message,
          data,
+
       });
    }
 

@@ -7,7 +7,7 @@ const {
 	getAllItems,
 } = require('../controllers/admin.controller')
 
-router.route('/').get(IndexController.index)
+// router.route('/').get(IndexController.index)
 
 router.route('/admin').post(createItem).get(getAllItems)
 // router.route('/admin').post(createItem).get(getAllItems)

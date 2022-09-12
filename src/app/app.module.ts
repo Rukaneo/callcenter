@@ -15,7 +15,10 @@ import { EditComponent } from './edit/edit.component';
 import { CreateComponent } from './create/create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
-
+import { NewAdminComponent } from './user/new-admin/new-admin.component';
+import { LoginComponent } from './user/login/login.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthTokenInterceptor } from './interceptors/auth-token.interceptor';
 
 
 
@@ -30,6 +33,8 @@ import { FormBuilder } from '@angular/forms';
     SearchComponent,
     EditComponent,
     CreateComponent,
+    NewAdminComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -43,7 +48,10 @@ import { FormBuilder } from '@angular/forms';
 
 
   ],
-  providers: [RosterService],
+  providers: [RosterService,
+  {
+    provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

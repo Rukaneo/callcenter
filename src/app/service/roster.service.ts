@@ -33,12 +33,12 @@ export class RosterService {
     return this.http.post<Roster[]>(`${this.ApiUrl}`, agent )
   }
 
-  updateAgent(id:any, student:any): Observable<Roster[]> {
-    return this.http.patch<Roster[]>(`${this.ApiUrl}/`+id, student)
+  updateAgent(id:any, agent:any): Observable<Roster[]> {
+    return this.http.patch<Roster[]>(`${this.ApiUrl}/`+id, agent)
   }
 
-  getAgent(id:any, student?:any): Observable<any> {
-    return this.http.get<any>(`${this.ApiUrl}/`+id, student)
+  getAgent(id:any, agent?:any): Observable<any> {
+    return this.http.get<any>(`${this.ApiUrl}/`+id, agent)
 
   }
 

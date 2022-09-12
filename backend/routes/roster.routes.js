@@ -1,7 +1,8 @@
 const express = require('express')
-const router = express.Router()
-const IndexController = require('../controllers/index.controller')
 
+const IndexController = require('../controllers/index.controller');
+const {protect, restrictTo} = require('../controllers/admin.controller');
+const app = express()
 
 const {
 createAgent,
@@ -11,11 +12,18 @@ updateAgentById,
 getAgentById
 } = require('../controllers/roster.controller')
 const rosterModel = require('../models/roster.model')
+const router = express.Router();
 
 
-router.route('/').get(IndexController.index);
+
+
+
+
+router.use(protect)
+router.use(restrictTo(['admin']))
 
 router.route('/roster').post(createAgent).get(getAllAgents);
+
 
 
 router.route('/roster/:id').delete(deleteAgentsById).patch(updateAgentById).get(getAgentById);

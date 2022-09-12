@@ -1,0 +1,44 @@
+<h1 class="login"> Sign in to Login </h1>
+
+<div class=formbody>
+  <form #Form="ngForm"  novalidate class="form" (ngSubmit)="onSubmit()">
+
+
+
+    <div >
+
+
+
+
+
+      <label for="username"> Username: </label>
+      <input type="text" name="username" [(ngModel)]="data.username">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" [(ngModel)]="data.password">
+    </div>
+    <div>
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" [(ngModel)]="data.email">
+    </div>
+
+    <div>
+      <label for="Role" class="subject"> Role </label>
+        &nbsp;&nbsp;&nbsp;<select name="Role" id="Role" [(ngModel)]="data.role">
+          <option value="null" selected> --</option>
+          <option value="admin">Admin</option>
+
+
+        </select>
+      </div>
+
+
+
+      <div>
+        <input type="submit" value="Login">
+      </div>
+
+
+    </form>
+

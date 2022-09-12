@@ -1,41 +1,16 @@
 
-    <h1 class="login"> Login </h1>
-
-    <div class=formbody>
-        <form action="/login" method="post">
 
 
+<div>
+  <button class="login" (click)="loginShow()">
+    Click to Login
+  </button>
 
-            <div >
+  <button class="signup" (click)="signUpShow()"> Click to Signup</button>
+</div>
+<div>
+<app-new-admin *ngIf="signUpShowApp"></app-new-admin>
+<app-login *ngIf="loginShowApp"> </app-login>
 
+</div>
 
-
-
-
-                        <label for="username"> Username: </label>
-                        <input type="text" name="username" required>
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                 <input type="password" name="password" required>
-            </div>
-            <div>
-                <!-- <label for="subject" class="subject"> Subject: </label>
-                &nbsp;&nbsp;&nbsp;<select name="subject" id="subject" required>
-                    <option value="" selected> --</option>
-                    <option value="English">English</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Science">Science</option>
-
-                </select> -->
-            </div>
-
-
-
-            <div>
-                <input type="submit" value="Login">
-            </div>
-
-
-        </form>
-    </div>
